@@ -56,3 +56,9 @@ div > img{
 .back {
     background-color: lightgrey;
 }
+
+
+.center1 {
+    text-align: center;
+    padding-top: 10px;
+}
