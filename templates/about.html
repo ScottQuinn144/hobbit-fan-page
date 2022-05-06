@@ -15,11 +15,12 @@
     </p>
     <div>
         <div class="row">
-            <div class="col-4 img"><img src="../static/img/h1.jpeg" alt="The Hobbit: An Unexpected Journey"></div>
-            <div class="col-4 img"><img src="../static/img/h2.jpg" alt="The Hobbit: The Desolation of Smaug"></div>
-            <div class="col-4 img img1"><img src="../static/img/h3.jpg" alt="The Hobbit: The Battle of the Five Armies"></div>
+            <div class="col-4 img300"><img src="../static/img/h1.jpeg" alt="The Hobbit: An Unexpected Journey"></div>
+            <div class="col-4 img300"><img src="../static/img/h2.jpg" alt="The Hobbit: The Desolation of Smaug"></div>
+            <div class="col-4 img300"><img src="../static/img/h3.jpg" alt="The Hobbit: The Battle of the Five Armies"></div>
         </div>
-        <div class="row title">
+        <br>
+        <div class="row">
             <div class="col-4">The Hobbit: An Unexpected Journey</div>
             <div class="col-4">The Hobbit: The Desolation of Smaug</div>
             <div class="col-4">The Hobbit: The Battle of the Five Armies</div>
@@ -27,29 +28,36 @@
     </div>
     </section>
     <h2 class="company">The Company</h2>
-    <div>
+    <div class="row-featurette">
         <h6 class="para">
             The company consists of these members:
         </h6>
-        <ul>
-            <div class="inline">
-                <div><a href="https://lotr.fandom.com/wiki/Thorin_II_Oakenshield">Thorin_II_Oakenshield</a></div>
-                <div><a href="https://lotr.fandom.com/wiki/F%C3%ADli_and_K%C3%ADli">Kili and Fili</a></div>
-                <div><a href="https://lotr.fandom.com/wiki/%C3%93in">Óin</a></div>
-                <div><a href="https://lotr.fandom.com/wiki/Gl%C3%B3in">Glóin</a></div>
-                <div><a href="https://lotr.fandom.com/wiki/Balin">Balin</a></div>
-                <div><a href="https://lotr.fandom.com/wiki/Dwalin">Dwalin</a></div>
-                <div><a href="https://lotr.fandom.com/wiki/Ori">Ori</a></div>
-                <div><a href="https://lotr.fandom.com/wiki/Dori">Dori</a></div>
-                <div><a href="https://lotr.fandom.com/wiki/Nori">Nori</a></div>
-                <div><a href="https://lotr.fandom.com/wiki/Bifuri">Bifur</a></div>
-                <div><a href="https://lotr.fandom.com/wiki/Bofur">Bofur</a></div>
-                <div><a href="https://lotr.fandom.com/wiki/Bombur">Bombur</a></div>
-                <div><a href="https://lotr.fandom.com/wiki/Bilbo_Baggins">Bilbo Baggins</a></div>
-                <div><a href="https://lotr.fandom.com/wiki/Gandalf">Gandalf</a></div>
-            </div>
-        </ul> 
-
-    </div>
-
-{% endblock %}
+        
+            <h2>{{ page_title }}</h2>
+            <p>
+                The formation of the group grew out of a meeting Gandalf had with Thorin in Bree which kindled Thorin's interest in
+                recapturing his long lost family inheritance. (Thorin's grandfather had been the king of the Lonely Mountain when
+                Smaug came and took it.) Remembering that he had once known an adventurous Hobbit on his travels in the Shire,
+                Gandalf decided to add Bilbo to their company because he knew that stealth and cunning were preferable to force.
+                Gandalf also believed that someone like Bilbo could keep the sometimes prideful and stubborn Dwarves from rash
+                action. The superstitious Dwarves also considered thirteen to be an unlucky number, and as Gandalf had planned to
+                leave on other business, welcomed a fourteenth to fill into their party.
+            </p>
+        
+            {% for member in company %}
+        
+                <div class="row featurette">
+                    <div class="col-md-7">
+                        <h3>{{ member.name }}</h3>
+                        <p>{{ member.description }}</p>
+                    </div>
+                    <div class="col-md-5 im">
+                        <img src="{{ member.image_source }}" alt="" class="featurette-image image-responsive">
+                    </div>
+                </div>
+        
+                <hr class="featurette-divider">
+        
+            {% endfor %}
+        
+        {% endblock %}
