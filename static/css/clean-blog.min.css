@@ -46,5 +46,11 @@ h6 {
 .inline {
     text-align: center;
     padding-top: 10px;
+    margin-bottom: 0%;
     background-color: antiquewhite;
+}
+
+footer {
+    padding: 0%;
+    margin: 0%;
 }
