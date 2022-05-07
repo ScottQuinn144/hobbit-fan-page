@@ -1,5 +1,6 @@
 .opa {
     opacity: 80%;
+    color: rgb(252, 255, 238);
     
 }
 .opac {
@@ -54,11 +55,43 @@ div > img{
 }
 
 .back {
-    background-color: lightgrey;
+    background-color: rgb(252, 255, 238);
+    overflow: visible;
 }
 
 
 .center1 {
     text-align: center;
-    padding-top: 10px;
+    margin-top: -20px;
+    padding-bottom: 10px;
 }
+
+.flashes{
+   background-color: rgb(252, 255, 238);
+   list-style-type: none;
+   text-align: center;
+   opacity: 70%;
+}
+
+.heading1{
+   text-align: center;
+   font-style: italic;
+   color: silver;
+}
+
+.jumbo{
+   text-align: center;
+   background-image: url('https://img3.goodfon.com/wallpaper/nbig/1/67/art-koldun-gendalf-gandalf.jpg');
+   background-repeat: no-repeat;
+   color: rgb(252, 255, 238);
+   font-weight: bolder;
+}
+
+.smoke {
+   background-color: rgb(252, 255, 238);
+}
+
+.textC {
+   color: rgb(252, 255, 238);
+}
+
