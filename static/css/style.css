@@ -79,6 +79,15 @@ div > img{
    color: silver;
 }
 
+.heading2 {
+   text-align: center;
+   font-style: italic;
+   color: darkslategrey;
+   font-weight: bolder;
+   text-decoration: underline solid 2px rgb(91, 108, 11);
+   text-transform: uppercase;
+}
+
 .jumbo{
    text-align: center;
    background-image: url('https://img3.goodfon.com/wallpaper/nbig/1/67/art-koldun-gendalf-gandalf.jpg');
@@ -95,3 +104,8 @@ div > img{
    color: rgb(252, 255, 238);
 }
 
+.member {
+   text-align: center;
+    margin-top: 20px;
+    padding-bottom: 10px;
+}
